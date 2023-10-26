@@ -72,14 +72,13 @@ public class StepDefATM {
     }
     // deposit
     // Tirawat Pongpratisonthi 6410450958
-    @When("I deposit {float} to my account")
-    public  void i_deposit_to_my_account_id(double amount) {
+    @When("I deposit {double} to my account")
+    public  void i_deposit_to_my_account(double amount) {
         atm.deposit(amount);
     }
 
-    @Then("I deposit {float}")
+    @Then("I deposit {double}")
     public void i_deposit(double balance) {
-        assertEquals(balance,
-                atm.getBalance());
+        assertEquals(balance, atm.getBalance());
     }
 }

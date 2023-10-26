@@ -8,7 +8,7 @@ Feature: Deposit
     Given a customer with id 5 and pin 1150 exists
     When I login to ATM with id 5 and pin 1150
 
-  Scenario: deposit amount must not less than 0
+  Scenario: deposit amount must more than 0
     When I deposit 100 to my account
     Then my account balance is 100
 
